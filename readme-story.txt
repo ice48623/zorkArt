@@ -1,7 +1,7 @@
 Story:
   There is one freshman study at MUIC. He wanted to be a good Java programmer, so he enroll in computer science major.
   He have no idea of what he will face. He only know that there is one course that will make he becomes good
-  Java programmer, OOC.
+  Java programmer, OOC. So he started to pursuit for his dreams.
 
 Objective:
   Level 1, the player need to find a door in order to go level 2. There will be some monster but not necessary to defeat it.
