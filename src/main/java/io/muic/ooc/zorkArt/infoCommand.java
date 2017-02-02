@@ -69,5 +69,16 @@ public class infoCommand implements Command {
 
         System.out.println("----------------------------------");
 
+        try {
+            Weapon weaponInRoom = currentRoom.getWeapon();
+            System.out.println("Weapon in this room: ");
+            System.out.println("Name: " + weaponInRoom.getName());
+            System.out.println("Attack Power: " + weaponInRoom.getAttackPower());
+            System.out.println("Attack Success Rate: " + weaponInRoom.getAttackSuccessRate());
+        } catch (Exception e) {
+            System.out.println("No weapon in this room");
+        }
+
+        System.out.println("----------------------------------");
     }
 }

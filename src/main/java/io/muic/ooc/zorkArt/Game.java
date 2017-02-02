@@ -48,6 +48,7 @@ public class Game {
             Command command = Game.getCommand(args[0]);
             if (null == command) {
                 System.out.println("Unknown command [" + commandLine + "]. Available commands: info and quit.");
+
             } else {
                 if (args.length == 2) {
                     command.apply(player, args[1]);
@@ -55,6 +56,7 @@ public class Game {
                     command.apply(player, null);
                 }
             }
+            System.out.println();
         }
     }
 }

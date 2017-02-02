@@ -22,12 +22,13 @@ public class attackWithCommand implements Command {
                 monster.setHp(monster.getHp() - useWeapon.getAttackPower());
                 if (monster.getHp() == 0) {
                     System.out.println("Monster: " + monster.getName() + " is dead");
+                    currentRoom.setMonster(null);
                 } else {
                     System.out.println("Monster HP: " + monster.getHp());
                 }
 
             } else {
-                System.out.println("No monster in this room");
+                System.out.println("Could not attack. No monster in this room");
             }
         }
 

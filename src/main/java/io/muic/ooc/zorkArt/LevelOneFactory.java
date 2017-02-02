@@ -110,9 +110,9 @@ public class LevelOneFactory implements MapFactory {
 
     @Override
     public void addMonster(ArrayList<Monster> allMonster, ArrayList<Room> allRooms) {
-        int iterate = allRooms.size();
-        if (allMonster.size() < iterate) {
-            iterate = allMonster.size();
+        int iterate = allMonster.size();
+        if (allRooms.size() < iterate) {
+            iterate = allRooms.size();
         }
 
         for (int i = 0; i < iterate; i++) {

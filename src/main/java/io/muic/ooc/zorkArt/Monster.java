@@ -4,40 +4,40 @@ package io.muic.ooc.zorkArt;
  * Created by ice on 1/29/17.
  */
 public class Monster {
-    private static String name;
-    private static double hp;
-    private static double attack;
-    private static int level;
+    private String name;
+    private double hp;
+    private double attack;
+    private int level;
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
-    public static void setName(String name) {
-        Monster.name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static double getHp() {
+    public double getHp() {
         return hp;
     }
 
-    public static void setHp(double hp) {
-        Monster.hp = hp;
+    public void setHp(double hp) {
+        this.hp = hp;
     }
 
-    public static double getAttack() {
+    public double getAttack() {
         return attack;
     }
 
-    public static void setAttack(double attack) {
-        Monster.attack = attack;
+    public void setAttack(double attack) {
+        this.attack = attack;
     }
 
-    public static int getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public static void setLevel(int level) {
-        Monster.level = level;
+    public void setLevel(int level) {
+        this.level = level;
     }
 }
