@@ -10,6 +10,7 @@ public class Room {
     private Room west;
     private Monster monster;
     private Portion portion;
+    private Weapon weapon;
     private Items item;
     private Player player;
 
@@ -75,5 +76,13 @@ public class Room {
 
     public void setPortion(Portion portion) {
         this.portion = portion;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 }

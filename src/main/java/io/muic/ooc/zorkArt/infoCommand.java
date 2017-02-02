@@ -64,7 +64,7 @@ public class infoCommand implements Command {
             System.out.println("Heal Power: " + portionInRoom.getHealPower());
         } catch (Exception e) {
             System.out.println("No portion in this room");
-            e.printStackTrace();
+//            e.printStackTrace();
         }
 
         System.out.println("----------------------------------");

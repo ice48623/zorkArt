@@ -150,6 +150,8 @@ public class LevelOneFactory implements MapFactory {
         gameMap.setAllRooms(allRoom);
 
         player.setCurrentRoom(gameMap.allRooms.get(0));
+        ArrayList<Portion> playerPortion = new ArrayList<>();
+        player.setPortions(playerPortion);
         return gameMap;
     }
 }

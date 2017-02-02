@@ -16,6 +16,8 @@ public class Game {
             put("go", new goCommand());
             put("attackWith", new attackWithCommand());
             put("use", new useCommand());
+            put("take", new takeCommand());
+            put("drop", new dropCommand());
 
         }
     };
