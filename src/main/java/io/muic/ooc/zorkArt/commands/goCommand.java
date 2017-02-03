@@ -16,7 +16,7 @@ public class goCommand implements Command{
             case "north":
 
                 nextRoom = player.getCurrentRoom().getNorth();
-                System.out.println("north: " + nextRoom);
+
                 if (nextRoom != null) {
                     player.setCurrentRoom(nextRoom);
                 } else {
@@ -25,7 +25,7 @@ public class goCommand implements Command{
                 break;
             case "south":
                 nextRoom = player.getCurrentRoom().getSouth();
-                System.out.println("south: " + nextRoom);
+
                 if (nextRoom != null) {
                     player.setCurrentRoom(nextRoom);
                 } else {
@@ -35,7 +35,7 @@ public class goCommand implements Command{
                 break;
             case "east":
                 nextRoom = player.getCurrentRoom().getEast();
-                System.out.println("east: " + nextRoom);
+
                 if (nextRoom != null) {
                     player.setCurrentRoom(nextRoom);
                 } else {
@@ -45,7 +45,7 @@ public class goCommand implements Command{
                 break;
             case "west":
                 nextRoom = player.getCurrentRoom().getWest();
-                System.out.println("west: " + nextRoom);
+
                 if (nextRoom != null) {
                     player.setCurrentRoom(nextRoom);
                 } else {
