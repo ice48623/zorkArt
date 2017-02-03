@@ -8,5 +8,5 @@ Objective:
   Level 2, the player need to find a key and a door. However,
            the player need a key in order to open the door and player will get this key if
            player can defeat one specific monster which is "Programming Two" monster.
-  Level 3, this level is the last level of the game. At this level there will be a boss called
-           "OOC". Once player can defeat this boss, the game is over.
+  Level 3, this level is the last level of the levelOneGame. At this level there will be a boss called
+           "OOC". Once player can defeat this boss, the levelOneGame is over.

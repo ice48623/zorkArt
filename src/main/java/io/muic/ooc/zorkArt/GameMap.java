@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by ice on 1/29/17.
  */
 public class GameMap {
-    ArrayList<Room> allRooms = new ArrayList<>();
+    ArrayList<Room> allRooms;
 
 
     public ArrayList<Room> getAllRooms() {

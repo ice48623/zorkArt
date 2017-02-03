@@ -1,6 +1,6 @@
-This is a command line game which the player will interactive with a game by command lines.
-This game is divided into three levels. The player need to complete these three levels in order to
-complete this game by using a set of commands specified below:
+This is a command line levelOneGame which the player will interactive with a levelOneGame by command lines.
+This levelOneGame is divided into three levels. The player need to complete these three levels in order to
+complete this levelOneGame by using a set of commands specified below:
 
 Commands:
 info - print all current information of a player, including the current room that character is at.
@@ -13,4 +13,4 @@ take <ITEM> - take specified ITEM into character bag. This ITEM will disappear f
               if it is taken. ITEM can be either weapon or portion.
 drop <ITEM> - drop specified ITEM from character bag. This ITEM will be destroyed if it is dropped.
               ITEM can be either weapon or portion.
-quit - quit the game.
+quit - quit the levelOneGame.

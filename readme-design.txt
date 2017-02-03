@@ -69,4 +69,4 @@ take(Items item): void - player pick up an item, this method will add picked ite
 drop(Items item): void - player drop item, this method will remove item of items list
 go(String direction): void - player walk to specified direction, this will update position of a player
 help(): String
-quit(): void - quit the game, cleat all properties
+quit(): void - quit the levelOneGame, cleat all properties

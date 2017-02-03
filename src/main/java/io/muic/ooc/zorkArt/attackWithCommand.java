@@ -1,5 +1,7 @@
 package io.muic.ooc.zorkArt;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Created by ice on 2/1/17.
  */
@@ -20,11 +22,26 @@ public class attackWithCommand implements Command {
             Monster monster = currentRoom.getMonster();
             if (monster != null) {
                 monster.setHp(monster.getHp() - useWeapon.getAttackPower());
-                if (monster.getHp() == 0) {
-                    System.out.println("Monster: " + monster.getName() + " is dead");
+                if (monster.getHp() <= 0) {
+                    System.out.println(monster.getName() + " is dead");
                     currentRoom.setMonster(null);
                 } else {
-                    System.out.println("Monster HP: " + monster.getHp());
+                    double random = ThreadLocalRandom.current().nextDouble(monster.getMIN_SUCCESS_RATE(), monster.getMAX_SUCCESS_RATE());
+                    System.out.println(random);
+                    if (random <= monster.getAttackSuccessRate()) {
+                        double currentHP = player.getHp();
+                        player.setHp(currentHP - monster.getAttack());
+                        System.out.println(monster.getName() + " attack!! " + "( " + monster.getAttack() + " )");
+                        if (player.getHp() > 0) {
+                            System.out.println(player.getName() + " HP = " + player.getHp());
+                        } else {
+                            System.out.println("You got kill by " + monster.getName());
+                            System.out.println("GAME OVER!!!");
+                            System.exit(0);
+                        }
+
+                    }
+                    System.out.println(monster.getName() + " HP: " + monster.getHp());
                 }
 
             } else {

@@ -3,10 +3,9 @@ package io.muic.ooc.zorkArt;
 import java.util.ArrayList;
 
 /**
- * Created by ice on 1/30/17.
+ * Created by ice on 2/3/17.
  */
-public class LevelOneFactory implements MapFactory {
-
+public class LevelThreeFactory implements MapFactory {
     @Override
     public ArrayList<Room> createRoom() {
         ArrayList<Room> allRooms = new ArrayList<>();
@@ -19,30 +18,31 @@ public class LevelOneFactory implements MapFactory {
     @Override
     public ArrayList<Monster> createMonster() {
         ArrayList<Monster> allMonster = new ArrayList<>();
-        Monster ComPro = new Monster();
-        ComPro.setName("Com pro 1");
-        ComPro.setAttack(10);
-        ComPro.setHp(40);
-        ComPro.setLevel(1);
-        ComPro.setAttackSuccessRate(0.3);
+        Monster OPL = new Monster();
+        OPL.setName("OPL");
+        OPL.setAttack(19);
+        OPL.setHp(75);
+        OPL.setLevel(4);
+        OPL.setAttackSuccessRate(0.1);
 
-        Monster DataStruc = new Monster();
-        DataStruc.setName("Data Structure");
-        DataStruc.setLevel(2);
-        DataStruc.setHp(60);
-        DataStruc.setAttack(15);
-        DataStruc.setAttackSuccessRate(0.2);
+        Monster Algo = new Monster();
+        Algo.setName("Algo");
+        Algo.setLevel(4);
+        Algo.setHp(70);
+        Algo.setAttack(17);
+        Algo.setAttackSuccessRate(0.2);
 
-        Monster FilePro = new Monster();
-        FilePro.setName("File Pro");
-        FilePro.setLevel(2);
-        FilePro.setHp(60);
-        FilePro.setAttack(15);
-        FilePro.setAttackSuccessRate(0.4);
 
-        allMonster.add(ComPro);
-        allMonster.add(DataStruc);
-        allMonster.add(FilePro);
+        Monster OOC = new Monster();
+        OOC.setName("OS");
+        OOC.setLevel(5);
+        OOC.setHp(80);
+        OOC.setAttack(20);
+        OOC.setAttackSuccessRate(0.4);
+
+        allMonster.add(OPL);
+        allMonster.add(Algo);
+        allMonster.add(OOC);
         return allMonster;
     }
 
@@ -64,16 +64,16 @@ public class LevelOneFactory implements MapFactory {
         ArrayList<Portion> allPortions = new ArrayList<>();
 
         Portion Mocha = new Portion();
-        Mocha.setName("Mocha");
-        Mocha.setHealPower(12);
+        Mocha.setName("Americano");
+        Mocha.setHealPower(20);
 
         Portion Coke = new Portion();
-        Coke.setName("Coke");
-        Coke.setHealPower(7);
+        Coke.setName("Sleep");
+        Coke.setHealPower(30);
 
         Portion Candy = new Portion();
-        Candy.setName("Candy");
-        Candy.setHealPower(2);
+        Candy.setName("Fruit");
+        Candy.setHealPower(6);
 
         allPortions.add(Mocha);
         allPortions.add(Coke);
