@@ -3,17 +3,18 @@ package io.muic.ooc.zorkArt.mapFactory;
 import io.muic.ooc.zorkArt.item.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by ice on 2/3/17.
  */
 public class LevelTwoFactory implements MapFactory {
     @Override
-    public ArrayList<Room> createRoom() {
+    public ArrayList<Room> createRoom(int numberOfRoom) {
         ArrayList<Room> allRooms = new ArrayList<>();
-        allRooms.add(new Room());
-        allRooms.add(new Room());
-        allRooms.add(new Room());
+        for (int i = 0; i < numberOfRoom; i++) {
+            allRooms.add(new Room());
+        }
         return allRooms;
     }
 
@@ -84,14 +85,45 @@ public class LevelTwoFactory implements MapFactory {
     }
 
     @Override
-    public void connectRoom(ArrayList<Room> allRooms) {
+    public void connectRoom(ArrayList<Room> allRooms, List<String> roomConfig) {
 
-        for (int i = 0; i < allRooms.size() -1; i++) {
-            allRooms.get(i).setEast(allRooms.get(i + 1));
-            allRooms.get(i + 1).setWest(allRooms.get(i));
+        for (String line : roomConfig) {
+            ArrayList<Integer> allConfig = parseToInt(line);
+
+            int w = allConfig.get(1);
+            int n = allConfig.get(2);
+            int e = allConfig.get(3);
+            int s = allConfig.get(4);
+
+            Room root = allRooms.get(allConfig.get(0));
+            if (w != -1) {
+                Room west = allRooms.get(w);
+                root.setWest(west);
+            }
+            if (n != -1) {
+                Room north = allRooms.get(n);
+                root.setNorth(north);
+            }
+            if (e != -1) {
+                Room east = allRooms.get(e);
+                root.setEast(east);
+            }
+            if (s != -1) {
+                Room south = allRooms.get(s);
+                root.setSouth(south);
+            }
+
         }
     }
 
+    public ArrayList<Integer> parseToInt(String line) {
+        ArrayList<Integer> allConfig = new ArrayList<>();
+        String[] connectRoomConfig = line.split(" ");
+        for (String con : connectRoomConfig) {
+            allConfig.add(Integer.parseInt(con));
+        }
+        return allConfig;
+    }
 
     @Override
     public void addWeapon(ArrayList<Weapon> allWeapons, Player player) {
@@ -125,14 +157,18 @@ public class LevelTwoFactory implements MapFactory {
 
     @Override
     public GameMap create(Player player) {
+        List<String> lines = readFile.readLine("/home/ice/Desktop/ooc/Assignment/a2/zorkArt/src/main/java/io/muic/ooc/zorkArt/levelThreeConfig.txt");
+        int numberOfRoom = Integer.parseInt(lines.get(0));
+        List<String> roomConfig = lines.subList(1, lines.size());
+
         GameMap gameMap = new GameMap();
 
-        ArrayList<Room> allRoom = createRoom();
+        ArrayList<Room> allRoom = createRoom(numberOfRoom);
         ArrayList<Monster> allMonster = createMonster();
         ArrayList<Weapon> allWeapons = createWeapon();
         ArrayList<Portion> allPortions = createPortion();
 
-        connectRoom(allRoom);
+        connectRoom(allRoom, roomConfig);
         addMonster(allMonster, allRoom);
         addWeapon(allWeapons, player);
         addPortion(allPortions, allRoom);
