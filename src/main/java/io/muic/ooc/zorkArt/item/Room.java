@@ -11,7 +11,6 @@ public class Room {
     private Monster monster;
     private Portion portion;
     private Weapon weapon;
-    private Items item;
     private Player player;
 
     public Room getNorth() {
@@ -52,14 +51,6 @@ public class Room {
 
     public void setMonster(Monster monster) {
         this.monster = monster;
-    }
-
-    public Items getItem() {
-        return item;
-    }
-
-    public void setItem(Items item) {
-        this.item = item;
     }
 
     public Player getPlayer() {

@@ -10,7 +10,6 @@ public class Player {
     private double hp;
     private ArrayList<Weapon> weapons;
     private double attack;
-    private ArrayList<Items> items;
     private ArrayList<Portion> portions;
     private Room currentRoom;
 
@@ -44,14 +43,6 @@ public class Player {
 
     public void setAttack(double attack) {
         this.attack = attack;
-    }
-
-    public ArrayList<Items> getItems() {
-        return items;
-    }
-
-    public void setItems(ArrayList<Items> items) {
-        this.items = items;
     }
 
     public Room getCurrentRoom() {
