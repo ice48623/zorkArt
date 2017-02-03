@@ -6,11 +6,8 @@ import io.muic.ooc.zorkArt.commands.useCommand;
 import io.muic.ooc.zorkArt.item.Player;
 import io.muic.ooc.zorkArt.item.Portion;
 import io.muic.ooc.zorkArt.item.Weapon;
-import io.muic.ooc.zorkArt.mapFactory.GameMap;
-import io.muic.ooc.zorkArt.mapFactory.LevelOneFactory;
-import org.junit.Test;
 
-import java.util.ArrayList;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
