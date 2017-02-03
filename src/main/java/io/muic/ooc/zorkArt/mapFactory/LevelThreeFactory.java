@@ -158,7 +158,7 @@ public class LevelThreeFactory implements MapFactory {
 
     @Override
     public GameMap create(Player player) {
-        List<String> lines = readFile.readLine("/home/ice/Desktop/ooc/Assignment/a2/zorkArt/src/main/java/io/muic/ooc/zorkArt/levelThreeConfig.txt");
+        List<String> lines = readFile.readLine("/home/ice/Desktop/ooc/Assignment/a2/zorkArt/src/main/java/io/muic/ooc/zorkArt/mapConfigFiles/levelOneConfig.txt");
         int numberOfRoom = Integer.parseInt(lines.get(0));
         List<String> roomConfig = lines.subList(1, lines.size());
 
