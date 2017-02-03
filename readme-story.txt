@@ -4,9 +4,4 @@ Story:
   Java programmer, OOC. So he started to pursuit for his dreams.
 
 Objective:
-  Level 1, the player need to find a door in order to go level 2. There will be some monster but not necessary to defeat it.
-  Level 2, the player need to find a key and a door. However,
-           the player need a key in order to open the door and player will get this key if
-           player can defeat one specific monster which is "Programming Two" monster.
-  Level 3, this level is the last level of the levelOneGame. At this level there will be a boss called
-           "OOC". Once player can defeat this boss, the levelOneGame is over.
+  Level 1 - 3: the player need to killed all the monster in each level in order to complete this game.

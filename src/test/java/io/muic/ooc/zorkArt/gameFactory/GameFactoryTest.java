@@ -2,6 +2,7 @@ package io.muic.ooc.zorkArt.gameFactory;
 
 import io.muic.ooc.zorkArt.commands.dropCommand;
 import io.muic.ooc.zorkArt.commands.takeCommand;
+import io.muic.ooc.zorkArt.commands.useCommand;
 import io.muic.ooc.zorkArt.item.Player;
 import io.muic.ooc.zorkArt.item.Portion;
 import io.muic.ooc.zorkArt.item.Weapon;
@@ -25,7 +26,7 @@ public class GameFactoryTest {
         dropCommand dropCommand = new dropCommand();
 
         int beforeDropWeapon = player.getWeapons().size();
-        dropCommand.apply(player, "weapon1");
+        dropCommand.apply(player, "Pweapon1");
         int afterDropWeapon = player.getWeapons().size();
         assertTrue(beforeDropWeapon > afterDropWeapon);
         System.out.println("Drop weapon test passed");
@@ -47,8 +48,8 @@ public class GameFactoryTest {
     }
 
     @Test
-    public void takeCommandPlayerTest() throws Exception {
-        System.out.println("Start testing takeCommandPlayer...");
+    public void takeCommandWeaponPlayerTest() throws Exception {
+        System.out.println("Start testing takeCommandWeaponPlayer...");
         Player player = initializePlayer();
         takeCommand takeCommand = new takeCommand();
 
@@ -63,31 +64,72 @@ public class GameFactoryTest {
     }
 
     @Test
-    public void takeCommandRoomTest() throws Exception {
-        System.out.println("Start testing takeCommandRoom...");
+    public void takeCommandWeaponRoomTest() throws Exception {
+        System.out.println("Start testing takeCommandWeaponRoom...");
         Player player = initializePlayer();
         takeCommand takeCommand = new takeCommand();
 
-        Weapon roomWeapon = player.getCurrentRoom().getWeapon();
+        Weapon beforeRoomWeapon = player.getCurrentRoom().getWeapon();
         int beforeTakeWeaponRoom = 0;
-        if (roomWeapon != null) {
+        if (beforeRoomWeapon != null) {
             beforeTakeWeaponRoom = 1;
         }
 
-        int afterTakeWeaponRoom = 1;
-        if (roomWeapon == null) {
-            afterTakeWeaponRoom = 0;
+        takeCommand.apply(player, "weapon1");
+
+        Weapon afterRoomWeapon = player.getCurrentRoom().getWeapon();
+        int afterTakeWeaponRoom = 0;
+        if (afterRoomWeapon != null) {
+            afterTakeWeaponRoom = 1;
         }
-        System.out.println(beforeTakeWeaponRoom);
-        System.out.println(afterTakeWeaponRoom);
+
         assertTrue(beforeTakeWeaponRoom > afterTakeWeaponRoom);
 
         System.out.println("Test player taking weapon passed (Room side)");
     }
 
+    @Test
+    public void takeCommandPortionRoomTest() throws Exception {
+        System.out.println("Start testing takeCommandPortionRoom...");
+        Player player = initializePlayer();
+        takeCommand takeCommand = new takeCommand();
+
+        Portion beforeRoomPortion = player.getCurrentRoom().getPortion();
+        int beforeTakePortionRoom = 0;
+        if (beforeRoomPortion != null) {
+            beforeTakePortionRoom = 1;
+        }
+
+        takeCommand.apply(player, "portion1");
+
+        Portion afterRoomPortion = player.getCurrentRoom().getPortion();
+        int afterTakePortionRoom = 0;
+        if (afterRoomPortion != null) {
+            afterTakePortionRoom = 1;
+        }
+
+        assertTrue(beforeTakePortionRoom > afterTakePortionRoom);
+
+        System.out.println("Test player taking portion passed (Room side)");
+    }
+
+    @Test
+    public void useCommandPortion() throws Exception {
+        System.out.println("Start testing useCommandPortion...");
+        Player player = initializePlayer();
+        useCommand useCommand = new useCommand();
+
+        int beforeUsePortion = player.getPortions().size();
+        useCommand.apply(player, "Pportion1");
+        int afterUsePortion = player.getPortions().size();
+
+        assertTrue(beforeUsePortion > afterUsePortion);
+
+        System.out.println("Test player use portion passed");
+    }
+
     public Player initializePlayer() throws Exception {
         Player player = new Player();
-
         TestMap testMap = new TestMap();
         testMap.create(player);
 

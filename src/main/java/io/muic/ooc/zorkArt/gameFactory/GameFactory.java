@@ -20,6 +20,7 @@ public abstract class GameFactory {
             put("use", new useCommand());
             put("take", new takeCommand());
             put("drop", new dropCommand());
+            put("help", new helpCommand());
 
         }
     };

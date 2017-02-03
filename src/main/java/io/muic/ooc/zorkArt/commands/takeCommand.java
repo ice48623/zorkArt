@@ -28,7 +28,7 @@ public class takeCommand implements Command {
 
         } catch (Exception e) {
             System.out.println("No Weapon or portion in this room");
-            e.printStackTrace();
+//            e.printStackTrace();
         }
     }
 }
