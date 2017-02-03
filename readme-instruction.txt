@@ -14,4 +14,4 @@ take <ITEM> - take specified ITEM into character bag. This ITEM will disappear f
 drop <ITEM> - drop specified ITEM from character bag. This ITEM will be destroyed if it is dropped.
               ITEM can be either weapon or portion.
 help - print all available commands and its usage.
-quit - quit the levelOneGame.
+quit - quit the game.
