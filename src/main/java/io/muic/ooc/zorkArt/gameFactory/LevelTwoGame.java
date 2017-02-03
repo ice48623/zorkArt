@@ -1,4 +1,11 @@
-package io.muic.ooc.zorkArt;
+package io.muic.ooc.zorkArt.gameFactory;
+
+import io.muic.ooc.zorkArt.item.Monster;
+import io.muic.ooc.zorkArt.item.Player;
+import io.muic.ooc.zorkArt.item.Room;
+import io.muic.ooc.zorkArt.commands.Command;
+import io.muic.ooc.zorkArt.mapFactory.GameMap;
+import io.muic.ooc.zorkArt.mapFactory.LevelTwoFactory;
 
 import java.util.ArrayList;
 import java.util.Iterator;

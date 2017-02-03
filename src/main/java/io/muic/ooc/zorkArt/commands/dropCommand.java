@@ -1,4 +1,8 @@
-package io.muic.ooc.zorkArt;
+package io.muic.ooc.zorkArt.commands;
+
+import io.muic.ooc.zorkArt.item.Player;
+import io.muic.ooc.zorkArt.item.Portion;
+import io.muic.ooc.zorkArt.item.Weapon;
 
 import java.util.ArrayList;
 import java.util.Iterator;

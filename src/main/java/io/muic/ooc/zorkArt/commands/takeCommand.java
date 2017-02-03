@@ -1,4 +1,9 @@
-package io.muic.ooc.zorkArt;
+package io.muic.ooc.zorkArt.commands;
+
+import io.muic.ooc.zorkArt.item.Player;
+import io.muic.ooc.zorkArt.item.Portion;
+import io.muic.ooc.zorkArt.item.Room;
+import io.muic.ooc.zorkArt.item.Weapon;
 
 /**
  * Created by ice on 2/2/17.

@@ -1,4 +1,7 @@
-package io.muic.ooc.zorkArt;
+package io.muic.ooc.zorkArt.commands;
+
+import io.muic.ooc.zorkArt.item.Player;
+import io.muic.ooc.zorkArt.item.Room;
 
 /**
  * Created by ice on 2/1/17.

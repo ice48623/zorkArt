@@ -1,4 +1,6 @@
-package io.muic.ooc.zorkArt;
+package io.muic.ooc.zorkArt.mapFactory;
+
+import io.muic.ooc.zorkArt.item.Room;
 
 import java.util.ArrayList;
 

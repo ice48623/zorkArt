@@ -1,4 +1,9 @@
-package io.muic.ooc.zorkArt;
+package io.muic.ooc.zorkArt.commands;
+
+import io.muic.ooc.zorkArt.item.Monster;
+import io.muic.ooc.zorkArt.item.Player;
+import io.muic.ooc.zorkArt.item.Room;
+import io.muic.ooc.zorkArt.item.Weapon;
 
 import java.util.concurrent.ThreadLocalRandom;
 

@@ -1,4 +1,4 @@
-package io.muic.ooc.zorkArt;
+package io.muic.ooc.zorkArt.item;
 
 /**
  * Created by ice on 2/1/17.

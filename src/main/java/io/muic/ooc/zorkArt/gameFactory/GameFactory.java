@@ -1,4 +1,8 @@
-package io.muic.ooc.zorkArt;
+package io.muic.ooc.zorkArt.gameFactory;
+
+import io.muic.ooc.zorkArt.item.Player;
+import io.muic.ooc.zorkArt.commands.*;
+import io.muic.ooc.zorkArt.mapFactory.GameMap;
 
 import java.util.HashMap;
 
